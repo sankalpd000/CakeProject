@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/ProjectServer/CustSignUp?wsdl" uri="wsdl/localhost_8080/ProjectServer/CustSignUp.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/CustSignUp?xsd=1" uri="wsdl/localhost_8080/ProjectServer/CustSignUp.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/Dsignup?wsdl" uri="wsdl/localhost_8080/ProjectServer/Dsignup.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/Dsignup?xsd=1" uri="wsdl/localhost_8080/ProjectServer/Dsignup.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/adminlogin?wsdl" uri="wsdl/localhost_8080/ProjectServer/adminlogin.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/adminlogin?xsd=1" uri="wsdl/localhost_8080/ProjectServer/adminlogin.xsd_1.xsd"/>
+</catalog>

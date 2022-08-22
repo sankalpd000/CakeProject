@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/ProjectServer/CustSignUp?wsdl" uri="src/conf/xml-resources/web-service-references/CustSignUp/wsdl/localhost_8080/ProjectServer/CustSignUp.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/CustSignUp?xsd=1" uri="src/conf/xml-resources/web-service-references/CustSignUp/wsdl/localhost_8080/ProjectServer/CustSignUp.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/Dsignup?wsdl" uri="src/conf/xml-resources/web-service-references/Dsignup_1/wsdl/localhost_8080/ProjectServer/Dsignup.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/Dsignup?xsd=1" uri="src/conf/xml-resources/web-service-references/Dsignup_1/wsdl/localhost_8080/ProjectServer/Dsignup.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/adminlogin?wsdl" uri="src/conf/xml-resources/web-service-references/adminlogin/wsdl/localhost_8080/ProjectServer/adminlogin.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/adminlogin?xsd=1" uri="src/conf/xml-resources/web-service-references/adminlogin/wsdl/localhost_8080/ProjectServer/adminlogin.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/Adminlogin?wsdl" uri="src/conf/xml-resources/web-service-references/Adminlogin_2/wsdl/localhost_8080/ProjectServer/Adminlogin.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/Adminlogin?xsd=1" uri="src/conf/xml-resources/web-service-references/Adminlogin_2/wsdl/localhost_8080/ProjectServer/Adminlogin.xsd_1.xsd"/>
+</catalog>

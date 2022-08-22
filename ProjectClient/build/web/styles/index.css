@@ -1,0 +1,140 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jul 31, 2022, 1:14:51 PM
+    Author     : abc
+*/
+.topnav{
+position: fixed;
+box-sizing: border-box;
+height: 75px;
+width: 100%;
+background-color: rgba(20, 17, 37, 1);
+display: flex;
+left: 0px;
+top: 0px;
+border: 3px solid #000000;
+}
+#home{
+    float:left;
+}
+
+.topnav div{
+    float: left;
+}
+
+.topnav a{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+ .topnav input[type=text] {
+width: 661px;
+height: 40px;
+ }
+ #searchdiv{
+     width: 50%;
+     padding: 17px 00px 15px 40px;
+    text-align:center;
+ }
+ #search{
+     padding: 0px 0px 0px 0px;
+ }
+ #account{
+     color: white;
+     padding: 20px 20px 20px 20px;
+     float: right;
+ }
+ #contact{
+     color: white;
+     text-align: center;
+     padding: 20px 20px 20px 20px;
+     float: right;
+ }
+ #groupAC{
+     float: right;
+     padding: 0px 0px 0px 180px;
+ }
+
+.dropbtn {
+   background-color:rgba(20, 17, 37, 1);
+   color: white;
+  padding: 20px 20px 20px 20px;
+  font-size: 15px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover 
+{background-color: #ddd;}
+.dropdown:hover .dropdown-content 
+{display: block;}
+.dropdown:hover .dropbtn 
+{opacity: 0.6}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.product-card{
+     width: 80%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 25px;
+  display: block;
+    margin: 10px;
+  border-radius: 15px 15px 15px 15px; 
+}
+
+.product-card .img{
+    width: 100%;
+    height: auto;
+    display: block;
+  border-radius: 25px;
+    
+}
+.product-card .name{
+    background-color: white;
+    padding: 20px;
+    
+}
+
+.grid-item{
+ 
+}
+
+
+
+.product-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.product-card {
+ padding: 2px 16px;
+ display: block;
+}
+.banner img{
+  width: 100%;
+  height: auto;
+}
+

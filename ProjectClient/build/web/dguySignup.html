@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Sign Up As Delivery Guy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <div class="signupDBanner">
+            <h1>Join as delivery guy</h1>
+        </div>
+        <div class="SignupDform" autocomplete="off">
+            <form action="dReg.jsp">
+                <label for="DUname">Username:</label><br>
+                <input type="text" id="DUname" name="DUname" required>
+                <br><br>
+                <label for="Dname">Name:</label><br>
+                <input type="text" id="Dname" name="Dname" required>
+                <br><br>
+                <label for="phoneD">Enter your phone number:</label><br>
+                <input type="text" id="phoneD" name="phoneD" minlength="10" maxlength="10" required>
+                <br><br>
+                <label for="newDmail">Enter Email ID:</label><br>
+                <input type="email" placeholder="example123@examle.com" id="newDmail" name="txtnewDmail" required><br><br>
+                <label for="createDpass">Create password:</label><br>
+                <input type="password" id="createDpass" name="txtnewDpass" required>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
