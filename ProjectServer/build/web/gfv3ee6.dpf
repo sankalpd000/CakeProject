@@ -17,20 +17,16 @@
 -->
 <glassfish-web-app error-url="">
   <resource-ref>
-    <res-ref-name>mydsn</res-ref-name>
-    <jndi-name>java:app/jdbc/mydb</jndi-name>
+    <res-ref-name>ref1</res-ref-name>
+    <jndi-name>java:app/jdbc/MYDS</jndi-name>
   </resource-ref>
   <resource-ref>
-    <res-ref-name>mydsn2</res-ref-name>
-    <jndi-name>java:app/jdbc/myDatasource</jndi-name>
+    <res-ref-name>ref2</res-ref-name>
+    <jndi-name>java:app/jdbc/MYDS</jndi-name>
   </resource-ref>
   <resource-ref>
-    <res-ref-name>mydsn3</res-ref-name>
-    <jndi-name>java:app/jdbc/myDatasource</jndi-name>
-  </resource-ref>
-  <resource-ref>
-    <res-ref-name>dsn4</res-ref-name>
-    <jndi-name>java:app/jdbc/myDatasource</jndi-name>
+    <res-ref-name>ref3</res-ref-name>
+    <jndi-name>java:app/jdbc/MYDS</jndi-name>
   </resource-ref>
   <class-loader delegate="true"/>
   <jsp-config>

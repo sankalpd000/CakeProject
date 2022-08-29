@@ -8,19 +8,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>Admin Log</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/adminLogin.css"/>
     </head>
     <body>
         <div class="adminBanner">
             <h1>Admin</h1>
         </div>
-        <div class="Adminform" autocomplete="on">
-            <form action="adminLogin2.jsp" method="post">
-                <label for="mail">Enter Email ID:</label><br>
-                <input type="email" placeholder="example123@examle.com" id="mail" name="txtmail" required><br><br>
-                <label for="pass">Enter password:</label><br>
-                <input type="password" id="pass" name="txtpass" required><br><br>
-                <input type="submit" value="LogIN">
-            </form>
-        </div>
+       <form class="Adminform" autocomplete="on" action="adminLogin.jsp" method="post">
+            <label class="label-class" for="mail">Enter Email ID:</label>
+            <input class="field-class" type="email" placeholder="example123@examle.com" id="mail" name="txtmail" required><br><br>
+            <label class="label-class" for="pass">Enter password:</label>
+            <input class="field-class" type="password" id="pass" name="txtpass" required>
+            <center>
+                <input id="btn" type="submit" value="Login">
+            </center>
+        </form>
     </body>
 </html>

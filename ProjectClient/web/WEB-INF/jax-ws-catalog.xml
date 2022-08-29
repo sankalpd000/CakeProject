@@ -6,4 +6,9 @@
     <system systemId="http://localhost:8080/ProjectServer/Dsignup?xsd=1" uri="wsdl/localhost_8080/ProjectServer/Dsignup.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ProjectServer/adminlogin?wsdl" uri="wsdl/localhost_8080/ProjectServer/adminlogin.wsdl"/>
     <system systemId="http://localhost:8080/ProjectServer/adminlogin?xsd=1" uri="wsdl/localhost_8080/ProjectServer/adminlogin.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/SignUp?wsdl" uri="wsdl/localhost_8080/ProjectServer/SignUp.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/SignUp?xsd=1" uri="wsdl/localhost_8080/ProjectServer/SignUp.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/LoginAd?wsdl" uri="wsdl/localhost_8080/ProjectServer/LoginAd.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/LoginAd?xsd=1" uri="wsdl/localhost_8080/ProjectServer/LoginAd.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/LoginAd?xsd=2" uri="wsdl/localhost_8080/ProjectServer/LoginAd.xsd_2.xsd"/>
 </catalog>

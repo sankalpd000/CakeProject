@@ -8,48 +8,59 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Admin Log</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/adminLogin.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
     </head>
     <body>
-        
-    <%-- start web service invocation --%><hr/>
+ <div class="adminBanner">
+            <h1>Admin</h1>
+        </div>
+       <form class="Adminform" autocomplete="on" action="" method="post">
+            <label class="label-class" for="mail">Enter Email ID:</label>
+            <input class="field-class" type="email" placeholder="example123@examle.com" id="mail" name="txtmail" required><br><br>
+            <label class="label-class" for="pass">Enter password:</label>
+            <input class="field-class" type="password" id="pass" name="txtpass" required>
+            
+            <%-- start web service invocation --%><hr/>
     <%
-     String mail = request.getParameter("txtmail");
-    String pswd = request.getParameter("txtpass");
-    String redirectURL = "adminDashboard.html";
-    try {
-	com.project.Adminlogin_Service service = new com.project.Adminlogin_Service();
-	com.project.Adminlogin port = service.getAdminloginPort();
-        
+         String a1= request.getParameter("txtmail");
+        String a2= request.getParameter("txtpass");
+        if(a1 != null && a2 != null ){
+        try {
+	com.viva.LoginAd_Service service = new com.viva.LoginAd_Service();
+	com.viva.LoginAd port = service.getLoginAdPort();
 	 // TODO initialize WS operation arguments here
-	String email = mail;
-	String pass = pswd;
-	port.login(email, pass);
-         response.sendRedirect(redirectURL);
-    %>
+	java.lang.String mail = a1;
+	java.lang.String pass = a2;
+	// TODO process result here
+	com.viva.model.Admin result = port.login(mail, pass);
+	out.println("Result = "+result);
+         if(result != null){
+            request.setAttribute("admin", result);
+            request.getRequestDispatcher("adminDash.jsp").forward(request, response);
+        }
+         else{
+        %>
         
-    <%!
-        private void myFunc(String Bits, javax.servlet.jsp.JspWriter myOut)
-        {  
-          try{ myOut.println("<div>"+Bits+"</div>"); } 
-          catch(Exception eek) { }
+        <h3> email/username/password wrong</h3>      
+                <%
+        }
+        } 
+        catch (Exception ex) {
+	// TODO handle custom exceptions here
+        }
         }
     %>
-        
-        <h1>succesful !</h1><br>
-        <h1>Welcome <%  
-            myFunc(email,out);
-            %> </h1><br>
-    <%
-
-    } catch (Exception ex) {
-	System.out.println("exception " + ex.getMessage());
-         %>
-        <h1>error</h1><br>
-    <%
-    }
-    %>
     <%-- end web service invocation --%><hr/>
+            
+            
+            <center>
+                <input id="btn" type="submit" value="Login">
+            </center>
+        </form>
+    
     </body>
 </html>

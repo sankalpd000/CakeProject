@@ -1,0 +1,40 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 22 Aug, 2022, 9:12:55 PM
+    Author     : SankalpD
+*/
+.Adminform{
+    width: 30%;
+    background-color: plum;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0);
+    display: block;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.Adminform #btn{
+    width: 60%;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 0px;
+}
+
+.Adminform .field-class{
+    width: 100%;
+    border: 0px;
+    border-color: blue;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.Adminform .label-class{
+}

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://viva.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://viva.com/">
+
+<xs:element name="signCust" type="tns:signCust"/>
+
+<xs:element name="signCustResponse" type="tns:signCustResponse"/>
+
+<xs:element name="signDguy" type="tns:signDguy"/>
+
+<xs:element name="signDguyResponse" type="tns:signDguyResponse"/>
+
+<xs:complexType name="signDguy">
+<xs:sequence>
+<xs:element name="d_uname" type="xs:string" minOccurs="0"/>
+<xs:element name="d_name" type="xs:string" minOccurs="0"/>
+<xs:element name="d_phn" type="xs:string" minOccurs="0"/>
+<xs:element name="d_mail" type="xs:string" minOccurs="0"/>
+<xs:element name="d_pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signDguyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signCust">
+<xs:sequence>
+<xs:element name="c_uname" type="xs:string" minOccurs="0"/>
+<xs:element name="c_name" type="xs:string" minOccurs="0"/>
+<xs:element name="c_add" type="xs:string" minOccurs="0"/>
+<xs:element name="c_phn" type="xs:string" minOccurs="0"/>
+<xs:element name="c_mail" type="xs:string" minOccurs="0"/>
+<xs:element name="c_pass" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signCustResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

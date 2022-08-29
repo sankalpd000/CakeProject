@@ -26,117 +26,37 @@
             <isset property="conf.dir"/>
         </condition>
     </target>
-    <target name="wsimport-client-CustSignUp" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/CustSignUp"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CustSignUp" destdir="${build.generated.dir}/jax-wsCache/CustSignUp" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CustSignUp/wsdl/localhost_8080/ProjectServer/CustSignUp.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/CustSignUp?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CustSignUp/wsdl/localhost_8080/ProjectServer/CustSignUp.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/CustSignUp"/>
+    <target name="wsimport-client-SignUp" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/SignUp"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/SignUp" destdir="${build.generated.dir}/jax-wsCache/SignUp" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/SignUp/wsdl/localhost_8080/ProjectServer/SignUp.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/SignUp?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/SignUp/wsdl/localhost_8080/ProjectServer/SignUp.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/SignUp"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/CustSignUp">
+            <fileset dir="${build.generated.dir}/jax-wsCache/SignUp">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-CustSignUp" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/project"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/CustSignUp"/>
+    <target name="wsimport-client-clean-SignUp" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/viva"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/SignUp"/>
     </target>
-    <target name="wsimport-client-Dsignup" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/Dsignup"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Dsignup" destdir="${build.generated.dir}/jax-wsCache/Dsignup" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Dsignup/wsdl/localhost_8080/ProjectServer/Dsignup.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/Dsignup?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Dsignup/wsdl/localhost_8080/ProjectServer/Dsignup.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/Dsignup"/>
+    <target name="wsimport-client-LoginAd" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/LoginAd"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/LoginAd" destdir="${build.generated.dir}/jax-wsCache/LoginAd" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/LoginAd/wsdl/localhost_8080/ProjectServer/LoginAd.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/LoginAd?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/LoginAd/wsdl/localhost_8080/ProjectServer/LoginAd.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/LoginAd"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/Dsignup">
+            <fileset dir="${build.generated.dir}/jax-wsCache/LoginAd">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-Dsignup" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/project"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/Dsignup"/>
+    <target name="wsimport-client-clean-LoginAd" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/viva"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/LoginAd"/>
     </target>
-    <target name="wsimport-client-Dsignup_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/Dsignup_1"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Dsignup_1" destdir="${build.generated.dir}/jax-wsCache/Dsignup_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Dsignup_1/wsdl/localhost_8080/ProjectServer/Dsignup.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/Dsignup?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Dsignup_1/wsdl/localhost_8080/ProjectServer/Dsignup.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/Dsignup_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/Dsignup_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-Dsignup_1" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/project"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/Dsignup_1"/>
-    </target>
-    <target name="wsimport-client-adminlogin" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/adminlogin"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/adminlogin" destdir="${build.generated.dir}/jax-wsCache/adminlogin" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/adminlogin/wsdl/localhost_8080/ProjectServer/adminlogin.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/adminlogin?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/adminlogin/wsdl/localhost_8080/ProjectServer/adminlogin.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/adminlogin"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/adminlogin">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-adminlogin" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/project"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/adminlogin"/>
-    </target>
-    <target name="wsimport-client-Adminlogin" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/Adminlogin"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Adminlogin" destdir="${build.generated.dir}/jax-wsCache/Adminlogin" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Adminlogin/wsdl/localhost_8080/ProjectServer/adminlogin.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/Adminlogin?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Adminlogin/wsdl/localhost_8080/ProjectServer/adminlogin.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/Adminlogin"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/Adminlogin">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-Adminlogin" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/project"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/Adminlogin"/>
-    </target>
-    <target name="wsimport-client-Adminlogin_1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/Adminlogin_1"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Adminlogin_1" destdir="${build.generated.dir}/jax-wsCache/Adminlogin_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Adminlogin_1/wsdl/localhost_8080/ProjectServer/Adminlogin.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/Adminlogin?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Adminlogin_1/wsdl/localhost_8080/ProjectServer/Adminlogin.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/Adminlogin_1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/Adminlogin_1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-Adminlogin_1" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/project"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/Adminlogin_1"/>
-    </target>
-    <target name="wsimport-client-Adminlogin_2" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/Adminlogin_2"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Adminlogin_2" destdir="${build.generated.dir}/jax-wsCache/Adminlogin_2" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Adminlogin_2/wsdl/localhost_8080/ProjectServer/Adminlogin.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/Adminlogin?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Adminlogin_2/wsdl/localhost_8080/ProjectServer/Adminlogin.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/Adminlogin_2"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/Adminlogin_2">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-Adminlogin_2" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/project"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/Adminlogin_2"/>
-    </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-CustSignUp, wsimport-client-Dsignup, wsimport-client-Dsignup_1, wsimport-client-adminlogin, wsimport-client-Adminlogin, wsimport-client-Adminlogin_1, wsimport-client-Adminlogin_2"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-SignUp, wsimport-client-LoginAd"/>
 </project>

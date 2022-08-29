@@ -8,56 +8,87 @@
 <!DOCTYPE html>
 <html>
     <head>
+         <title>Customer Log In</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
     </head>
     <body>
+        <!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
 
-        <h1>log in result</h1><br>
-    <%-- start web service invocation --%><hr/>
+
+
+    <body>
+                <div class="signupBanner">
+            <h1>Create new account</h1>
+        </div>
+        <div class="Signupform" autocomplete="off">
+            <form action="custReg.jsp">
+                <label for="CUname">Username:</label><br>
+                <input type="text" id="CUname" name="CUname" required>
+                <br><br>
+                <label for="Cname">Name:</label><br>
+                <input type="text" id="Cname" name="Cname" required>
+                <br><br>
+                <label for="CAddress">Address:</label><br>
+                <input type="text" id="CAddress" maxlength="255" name="CAddress" required>
+                <br><br>
+                <label for="phoneC">Enter your phone number:</label><br>
+                <input type="text" id="phoneC" name="phoneC" minlength="10" maxlength="10" required>
+                <br><br>
+                <label for="newCmail">Enter Email ID:</label><br>
+                <input type="email" placeholder="example123@examle.com" id="newCmail" name="txtnewCmail" required><br><br>
+                <label for="createCpass">Create password:</label><br>
+                <input type="password" id="createCpass" name="txtnewCpass" required>
+                <br><br>
+                
+                 <%-- start web service invocation --%><hr/>
     <%
-    String c1 = request.getParameter("CUname");
-    String c2 = request.getParameter("Cname");
-    String c3 = request.getParameter("CAddress");
-    int c4 = Integer.parseInt(request.getParameter("phoneC"));
-    String c5 = request.getParameter("txtnewCmail");
-    String c6 = request.getParameter("txtnewCpass");
-   
-    
     try {
-	com.project.CustSignUp_Service service = new com.project.CustSignUp_Service();
-	com.project.CustSignUp port = service.getCustSignUpPort();
+	com.viva.SignUp_Service service = new com.viva.SignUp_Service();
+	com.viva.SignUp port = service.getSignUpPort();
 	 // TODO initialize WS operation arguments here
-	java.lang.String cUname = c1;
-	java.lang.String cName = c2;
-	java.lang.String cAddress = c3;
-	int cPhn = c4;
-	java.lang.String cMail = c5;
-	java.lang.String cPass = c6;
-	port.signup(cUname, cName, cAddress, cPhn, cMail, cPass);
-        %>
-        
-        <%!
-private void myFunc(String Bits, javax.servlet.jsp.JspWriter myOut)
-{  
-  try{ myOut.println("<div>"+Bits+"</div>"); } 
-  catch(Exception eek) { }
-}
-%>
-        
-        <h1>succesful !</h1><br>
-        <h1>Welcome <%  
-            myFunc(c2,out);
-            %> </h1><br>
-    <%
+	java.lang.String cUname = "";
+	java.lang.String cName = "";
+	java.lang.String cAdd = "";
+	java.lang.String cPhn = "";
+	java.lang.String cMail = "";
+	java.lang.String cPass = "";
+	// TODO process result here
+	boolean result = port.signCust(cUname, cName, cAdd, cPhn, cMail, cPass);
+	out.println("Result = "+result);
     } catch (Exception ex) {
-	System.out.println("exception " + ex.getMessage());
-        %>
-        
-        <h1>error</h1><br>
-    <%
+	// TODO handle custom exceptions here
     }
     %>
     <%-- end web service invocation --%><hr/>
+        <div class="signupBanner">
+            <h1>Create new account</h1>
+        </div>
+        <div class="Signupform" autocomplete="off">
+            <form action="custReg.jsp">
+                <label for="CUname">Username:</label><br>
+                <input type="text" id="CUname" name="CUname" required>
+                <br><br>
+                <label for="Cname">Name:</label><br>
+                <input type="text" id="Cname" name="Cname" required>
+                <br><br>
+                <label for="CAddress">Address:</label><br>
+                <input type="text" id="CAddress" maxlength="255" name="CAddress" required>
+                <br><br>
+                <label for="phoneC">Enter your phone number:</label><br>
+                <input type="text" id="phoneC" name="phoneC" minlength="10" maxlength="10" required>
+                <br><br>
+                <label for="newCmail">Enter Email ID:</label><br>
+                <input type="email" placeholder="example123@examle.com" id="newCmail" name="txtnewCmail" required><br><br>
+                <label for="createCpass">Create password:</label><br>
+                <input type="password" id="createCpass" name="txtnewCpass" required>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
     </body>
 </html>

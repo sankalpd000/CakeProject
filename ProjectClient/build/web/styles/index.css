@@ -48,6 +48,7 @@ height: 40px;
      float: right;
  }
  #contact{
+     text-decoration:none;
      color: white;
      text-align: center;
      padding: 20px 20px 20px 20px;

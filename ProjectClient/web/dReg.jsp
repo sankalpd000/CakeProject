@@ -12,52 +12,51 @@
         <title>JSP Page</title>
     </head>
     <body>
-     <h1>log in result</h1><br>
+    <h1>log in result</h1><br>
     <%-- start web service invocation --%><hr/>
     <%
-        
-    String d1 = request.getParameter("DUname");
-    String d2 = request.getParameter("Dname");
-    int d3 = Integer.parseInt(request.getParameter("phoneD"));
-    String d4 = request.getParameter("txtnewDmail");
-    String d5 = request.getParameter("txtnewDpass");
-    try {
-    
-	com.project.Dsignup_Service service = new com.project.Dsignup_Service();
-	com.project.Dsignup port = service.getDsignupPort();
-	 // TODO initialize WS operation arguments here
-	java.lang.String duname = d1;
-	java.lang.String dname = d2;
-	int dphn = d3;
-	java.lang.String dmail = d4;
-	java.lang.String dpass = d5;
-	port.dsigup(duname, dname, dphn, dmail, dpass);
-                %>
-        
-        <%!
-private void myFunc(String Bits, javax.servlet.jsp.JspWriter myOut)
-{  
-  try{ myOut.println("<div>"+Bits+"</div>"); } 
-  catch(Exception eek) { }
-}
-%>
-        
-        <h1>succesful !</h1><br>
+        String d1 = request.getParameter("DUname");
+        String d2 = request.getParameter("Dname");
+        String d3 = request.getParameter("phoneD");
+        String d4 = request.getParameter("txtnewDmail");
+        String d5 = request.getParameter("txtnewDpass");
+        try {
+            com.project.Dsignup_Service service = new com.project.Dsignup_Service();
+            com.project.Dsignup port = service.getDsignupPort();
+            // TODO initialize WS operation arguments here
+            java.lang.String duname = d1;
+            java.lang.String dname = d2;
+            java.lang.String dphn = d3;
+            java.lang.String dmail = d4;
+            java.lang.String dpass = d5;
+            port.dsigup(duname, dname, dphn, dmail, dpass);            
+            %>
+            
+    <h1>succesful !</h1><br>
         <h1>Welcome <%  
             myFunc(d2,out);
-            %> </h1><br>
-    <%
-
-    }
+            %> 
+        </h1><br>
+            
+    <%            
+        } catch (Exception ex) {
+            System.out.println("exception " + ex.getMessage());
+%>
     
-    catch (Exception ex) {
-	System.out.println("exception " + ex.getMessage());
-         %>
-        <h1>error</h1><br>
-    <%
-    }
+        <h1>error <%  
+            myFunc(ex.getMessage(),out);
+            %> </h1><br>
+   
+
+        <%
+        }
     %>
-     %>
-    <%-- end web service invocation --%><hr/>
+    <%!
+        private void myFunc(String Bits, javax.servlet.jsp.JspWriter myOut)
+        {  
+          try{ myOut.println("<div>"+Bits+"</div>"); } 
+          catch(Exception eek) { }
+        }
+    %>
     </body>
 </html>

@@ -4,6 +4,7 @@
     Author     : SankalpD
 --%>
 
+<%@page import="com.viva.model.Customer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,15 @@
     </head>
     <body>
         
+        <%
+        Customer customer = (Customer) request.getAttribute("user") ;
+        if(customer != null){
+            System.out.println("Welcome " + customer.getName());
+        }else{
+            System.out.println("User is not logged in.");
+        }
+        %>
+        
       <div class="topnav" align="center">
             <div><a href="index.html" class="active" id="home"><img src="images\logo.png" alt="homepage" width="80px" height="30px"></a></div>
             <div id="searchdiv" >
@@ -24,7 +34,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">Account</button> 
                       <div class="dropdown-content">
-                        <a href="custLogin.html">Customer</a>
+                        <a href="custLogin.jsp">Customer</a>
                         <a href="dguyLogin.html">Delivery Guy</a>
                         <a href="adminLogin.html">Admin</a>
                       </div>
@@ -53,6 +63,7 @@
         </div>
             <footer>
                 <h1 align="center">this is footer</h1>
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#141125" fill-opacity="1" d="M0,192L48,208C96,224,192,256,288,240C384,224,480,160,576,122.7C672,85,768,75,864,85.3C960,96,1056,128,1152,122.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             </footer>
     </body>
 </html>
