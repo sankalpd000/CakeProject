@@ -11,6 +11,7 @@ import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 import com.viva.model.Admin;
 import com.viva.model.Customer;
+import com.viva.model.DGuy;
 
 
 /**
@@ -29,21 +30,21 @@ public interface LoginAd {
 
     /**
      * 
-     * @param dPass
-     * @param dUname
+     * @param mail
+     * @param pass
      * @return
-     *     returns boolean
+     *     returns com.viva.model.Admin
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "loginDguy", targetNamespace = "http://viva.com/", className = "com.viva.LoginDguy")
-    @ResponseWrapper(localName = "loginDguyResponse", targetNamespace = "http://viva.com/", className = "com.viva.LoginDguyResponse")
-    @Action(input = "http://viva.com/LoginAd/loginDguyRequest", output = "http://viva.com/LoginAd/loginDguyResponse")
-    public boolean loginDguy(
-        @WebParam(name = "d_uname", targetNamespace = "")
-        String dUname,
-        @WebParam(name = "d_pass", targetNamespace = "")
-        String dPass);
+    @RequestWrapper(localName = "login", targetNamespace = "http://viva.com/", className = "com.viva.Login")
+    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://viva.com/", className = "com.viva.LoginResponse")
+    @Action(input = "http://viva.com/LoginAd/loginRequest", output = "http://viva.com/LoginAd/loginResponse")
+    public Admin login(
+        @WebParam(name = "mail", targetNamespace = "")
+        String mail,
+        @WebParam(name = "pass", targetNamespace = "")
+        String pass);
 
     /**
      * 
@@ -65,20 +66,20 @@ public interface LoginAd {
 
     /**
      * 
-     * @param mail
-     * @param pass
+     * @param dPass
+     * @param dUname
      * @return
-     *     returns com.viva.model.Admin
+     *     returns com.viva.model.DGuy
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "login", targetNamespace = "http://viva.com/", className = "com.viva.Login")
-    @ResponseWrapper(localName = "loginResponse", targetNamespace = "http://viva.com/", className = "com.viva.LoginResponse")
-    @Action(input = "http://viva.com/LoginAd/loginRequest", output = "http://viva.com/LoginAd/loginResponse")
-    public Admin login(
-        @WebParam(name = "mail", targetNamespace = "")
-        String mail,
-        @WebParam(name = "pass", targetNamespace = "")
-        String pass);
+    @RequestWrapper(localName = "loginDguy", targetNamespace = "http://viva.com/", className = "com.viva.LoginDguy")
+    @ResponseWrapper(localName = "loginDguyResponse", targetNamespace = "http://viva.com/", className = "com.viva.LoginDguyResponse")
+    @Action(input = "http://viva.com/LoginAd/loginDguyRequest", output = "http://viva.com/LoginAd/loginDguyResponse")
+    public DGuy loginDguy(
+        @WebParam(name = "d_uname", targetNamespace = "")
+        String dUname,
+        @WebParam(name = "d_pass", targetNamespace = "")
+        String dPass);
 
 }

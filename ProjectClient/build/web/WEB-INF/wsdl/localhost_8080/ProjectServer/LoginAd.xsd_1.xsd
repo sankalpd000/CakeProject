@@ -36,7 +36,7 @@
 
 <xs:complexType name="loginDguyResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
+<xs:element name="return" type="ns1:DGuy" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

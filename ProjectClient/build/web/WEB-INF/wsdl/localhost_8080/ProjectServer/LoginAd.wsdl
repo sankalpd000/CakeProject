@@ -7,11 +7,11 @@
 <xsd:import namespace="http://model.viva.com/" schemaLocation="http://localhost:8080/ProjectServer/LoginAd?xsd=2"/>
 </xsd:schema>
 </types>
-<message name="loginDguy">
-<part name="parameters" element="tns:loginDguy"/>
+<message name="login">
+<part name="parameters" element="tns:login"/>
 </message>
-<message name="loginDguyResponse">
-<part name="parameters" element="tns:loginDguyResponse"/>
+<message name="loginResponse">
+<part name="parameters" element="tns:loginResponse"/>
 </message>
 <message name="loginCust">
 <part name="parameters" element="tns:loginCust"/>
@@ -19,29 +19,29 @@
 <message name="loginCustResponse">
 <part name="parameters" element="tns:loginCustResponse"/>
 </message>
-<message name="login">
-<part name="parameters" element="tns:login"/>
+<message name="loginDguy">
+<part name="parameters" element="tns:loginDguy"/>
 </message>
-<message name="loginResponse">
-<part name="parameters" element="tns:loginResponse"/>
+<message name="loginDguyResponse">
+<part name="parameters" element="tns:loginDguyResponse"/>
 </message>
 <portType name="LoginAd">
-<operation name="loginDguy">
-<input wsam:Action="http://viva.com/LoginAd/loginDguyRequest" message="tns:loginDguy"/>
-<output wsam:Action="http://viva.com/LoginAd/loginDguyResponse" message="tns:loginDguyResponse"/>
+<operation name="login">
+<input wsam:Action="http://viva.com/LoginAd/loginRequest" message="tns:login"/>
+<output wsam:Action="http://viva.com/LoginAd/loginResponse" message="tns:loginResponse"/>
 </operation>
 <operation name="loginCust">
 <input wsam:Action="http://viva.com/LoginAd/loginCustRequest" message="tns:loginCust"/>
 <output wsam:Action="http://viva.com/LoginAd/loginCustResponse" message="tns:loginCustResponse"/>
 </operation>
-<operation name="login">
-<input wsam:Action="http://viva.com/LoginAd/loginRequest" message="tns:login"/>
-<output wsam:Action="http://viva.com/LoginAd/loginResponse" message="tns:loginResponse"/>
+<operation name="loginDguy">
+<input wsam:Action="http://viva.com/LoginAd/loginDguyRequest" message="tns:loginDguy"/>
+<output wsam:Action="http://viva.com/LoginAd/loginDguyResponse" message="tns:loginDguyResponse"/>
 </operation>
 </portType>
 <binding name="LoginAdPortBinding" type="tns:LoginAd">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="loginDguy">
+<operation name="login">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -59,7 +59,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="login">
+<operation name="loginDguy">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

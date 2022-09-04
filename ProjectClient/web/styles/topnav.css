@@ -1,0 +1,103 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 Sep, 2022, 8:02:56 PM
+    Author     : SankalpD
+*/
+
+.topnav{
+position: fixed;
+box-sizing: border-box;
+height: 75px;
+width: 100%;
+background-color: rgba(20, 17, 37, 1);
+display: block;
+left: 0px;
+top: 0px;
+  z-index: 9;
+border: 3px solid #000000;
+}
+
+#home{
+    float:left;
+}
+
+.topnav div{
+    float: left;
+}
+
+.banner{
+    position: relative;
+    padding: 10px 0px 0px 0px;
+    margin:40px 0 5px 0px;
+    background-color: orange;
+}
+
+.topnav a{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+ .topnav input[type=text] {
+width: 661px;
+height: 40px;
+ }
+ #searchdiv{
+     width: 50%;
+     padding: 17px 00px 15px 40px;
+    text-align:center;
+ }
+ #search{
+     padding: 0px 0px 0px 0px;
+ }
+ #account{
+     color: white;
+     padding: 20px 20px 20px 20px;
+     float: right;
+ }
+ #contact{
+     text-decoration:none;
+     color: white;
+     text-align: center;
+     padding: 20px 20px 20px 20px;
+     float: right;
+ }
+ #groupAC{
+     float: right;
+     padding: 0px 0px 0px 180px;
+ }
+
+.dropbtn {
+   background-color:rgba(20, 17, 37, 1);
+   color: white;
+  padding: 20px 20px 20px 20px;
+  font-size: 15px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover 
+{background-color: #ddd;}
+.dropdown:hover .dropdown-content 
+{display: block;}
+.dropdown:hover .dropbtn 
+{opacity: 0.6}

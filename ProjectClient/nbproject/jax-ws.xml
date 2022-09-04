@@ -2,6 +2,38 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services/>
   <clients>
+    <client name="LoginAd">
+      <wsdl-url>http://localhost:8080/ProjectServer/LoginAd?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/ProjectServer/LoginAd.wsdl</local-wsdl-file>
+      <package-name>com.viva</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:8080/ProjectServer/LoginAd?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
     <client name="SignUp">
       <wsdl-url>http://localhost:8080/ProjectServer/SignUp?wsdl</wsdl-url>
       <local-wsdl-file>localhost_8080/ProjectServer/SignUp.wsdl</local-wsdl-file>
@@ -34,9 +66,9 @@
         </wsimport-option>
       </wsimport-options>
     </client>
-    <client name="LoginAd">
-      <wsdl-url>http://localhost:8080/ProjectServer/LoginAd?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/ProjectServer/LoginAd.wsdl</local-wsdl-file>
+    <client name="Product">
+      <wsdl-url>http://localhost:8080/ProjectServer/Product?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/ProjectServer/Product.wsdl</local-wsdl-file>
       <package-name>com.viva</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -54,7 +86,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/ProjectServer/LoginAd?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/ProjectServer/Product?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

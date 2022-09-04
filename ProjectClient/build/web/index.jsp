@@ -26,7 +26,7 @@
         %>
         
       <div class="topnav" align="center">
-            <div><a href="index.html" class="active" id="home"><img src="images\logo.png" alt="homepage" width="80px" height="30px"></a></div>
+            <div><a href="index.jsp" class="active" id="home"><img src="images\logo.png" alt="homepage" width="80px" height="30px"></a></div>
             <div id="searchdiv" >
               <input type="text" placeholder="Search.." id="search"> 
             </div>
@@ -35,8 +35,8 @@
                     <button class="dropbtn">Account</button> 
                       <div class="dropdown-content">
                         <a href="custLogin.jsp">Customer</a>
-                        <a href="dguyLogin.html">Delivery Guy</a>
-                        <a href="adminLogin.html">Admin</a>
+                        <a href="DLogin.jsp">Delivery Guy</a>
+                        <a href="adminLogin.jsp">Admin</a>
                       </div>
                 </div>  
                 <div><a href="Contact.html" id="contact">Contact</a></div>

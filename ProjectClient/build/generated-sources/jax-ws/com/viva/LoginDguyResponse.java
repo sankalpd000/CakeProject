@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import com.viva.model.DGuy;
 
 
 /**
@@ -17,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="return" type="{http://model.viva.com/}DGuy" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -33,21 +34,29 @@ import javax.xml.bind.annotation.XmlType;
 public class LoginDguyResponse {
 
     @XmlElement(name = "return")
-    protected boolean _return;
+    protected DGuy _return;
 
     /**
      * Gets the value of the return property.
      * 
+     * @return
+     *     possible object is
+     *     {@link DGuy }
+     *     
      */
-    public boolean isReturn() {
+    public DGuy getReturn() {
         return _return;
     }
 
     /**
      * Sets the value of the return property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link DGuy }
+     *     
      */
-    public void setReturn(boolean value) {
+    public void setReturn(DGuy value) {
         this._return = value;
     }
 

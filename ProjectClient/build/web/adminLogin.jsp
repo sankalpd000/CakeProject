@@ -12,55 +12,77 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/adminLogin.css"/>
+        <link rel="stylesheet" href="styles/topnav.css">
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Poppins:wght@500;600;700&family=Roboto&display=swap">
     </head>
     <body>
- <div class="adminBanner">
-            <h1>Admin</h1>
+        <div class="topnav" align="center">
+            <div><a href="index.jsp" class="active" id="home">
+                    <img src="images\logo.png" alt="homepage" width="80px" height="30px"></a>
+            </div>
+            <div id="searchdiv" >
+              <input type="text" placeholder="Search.." id="search"> 
+            </div>
+            <div id="groupAC">
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button> 
+                      <div class="dropdown-content">
+                        <a href="custLogin.jsp">Customer</a>
+                        <a href="dguyLogin.html">Delivery Guy</a>
+                        <a href="adminLogin.html">Admin</a>
+                      </div>
+                </div>  
+                <div><a href="Contact.html" id="contact">Contact</a></div>
+            </div>
         </div>
-       <form class="Adminform" autocomplete="on" action="" method="post">
-            <label class="label-class" for="mail">Enter Email ID:</label>
-            <input class="field-class" type="email" placeholder="example123@examle.com" id="mail" name="txtmail" required><br><br>
-            <label class="label-class" for="pass">Enter password:</label>
-            <input class="field-class" type="password" id="pass" name="txtpass" required>
+ <div class="banner">
+     <h1 id="header">Admin</h1>
+        </div>
+        <div>
+       <form class="Adminform" action="" method="post">
+           <label for="mail">Enter Email ID:</label><br>
+            <input type="email" placeholder="example123@examle.com" id="mail" name="txtmail" required><br><br>
+            <label for="pass">Enter password:</label><br>
+            <input type="password" id="pass" name="txtpass" required>
             
-            <%-- start web service invocation --%><hr/>
-    <%
-         String a1= request.getParameter("txtmail");
-        String a2= request.getParameter("txtpass");
-        if(a1 != null && a2 != null ){
-        try {
-	com.viva.LoginAd_Service service = new com.viva.LoginAd_Service();
-	com.viva.LoginAd port = service.getLoginAdPort();
-	 // TODO initialize WS operation arguments here
-	java.lang.String mail = a1;
-	java.lang.String pass = a2;
-	// TODO process result here
-	com.viva.model.Admin result = port.login(mail, pass);
-	out.println("Result = "+result);
-         if(result != null){
+             <%-- start web service invocation --%>
+            <%
+            String d4 = request.getParameter("txtmail");
+            String d5 = request.getParameter("txtpass");
+            if(d4 != null && d5 != null ){
+            try {
+                com.viva.LoginAd_Service service = new com.viva.LoginAd_Service();
+                com.viva.LoginAd port = service.getLoginAdPort();
+                 // TODO initialize WS operation arguments here
+                java.lang.String mail = d4;
+                java.lang.String pass = d5;
+                // TODO process result here
+                com.viva.model.Admin result = port.login(mail, pass);
+                System.out.println("Result = "+result);
+                if(result != null){
             request.setAttribute("admin", result);
             request.getRequestDispatcher("adminDash.jsp").forward(request, response);
         }
          else{
         %>
-        
-        <h3> email/username/password wrong</h3>      
+        <label style="color:red;"> email/username/password wrong</label> 
                 <%
-        }
-        } 
-        catch (Exception ex) {
-	// TODO handle custom exceptions here
-        }
-        }
-    %>
-    <%-- end web service invocation --%><hr/>
-            
-            
-            <center>
-                <input id="btn" type="submit" value="Login">
-            </center>
+                    }
+            } catch (Exception ex) {
+           System.out.println("error"+ ex.getMessage());  
+            }
+}
+            %>
+            <%-- end web service invocation --%>
+            <br><br>
+            <input  type="submit" value="Login">
         </form>
-    
+        </div>
+        
+   
     </body>
 </html>

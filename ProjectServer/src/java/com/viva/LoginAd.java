@@ -98,7 +98,7 @@ public class LoginAd {
      * @return 
      */
     @WebMethod(operationName = "loginDguy")
-    public boolean loginDguy(@WebParam(name = "d_uname") String d_uname, @WebParam(name = "d_pass") String d_pass) {
+    public DGuy loginDguy(@WebParam(name = "d_uname") String d_uname, @WebParam(name = "d_pass") String d_pass) {
 try{
             Connection d = ref1.getConnection();
             PreparedStatement ps=d.prepareStatement("SELECT * FROM DGUY WHERE (D_UNAME=? or D_MAIL=?) and D_PASS=?");
@@ -107,17 +107,23 @@ try{
             ps.setString(3, d_pass);
             ResultSet r= ps.executeQuery();
             if(r.next()){
+                String name = r.getString("D_NAME");
+                String username = r.getString("D_UNAME");
+                String mail = r.getString("D_MAIL");
+                String phone = r.getString("D_PHN");
+                String pass = r.getString("D_PASS");
+     
                 System.out.print(  "login successfull");
-                return true;
+                return new DGuy(username,name,phone,mail);
             }
             else{
                 System.out.print(  "login not successfull");
-                return false;
+                return null;
             }
         }
          catch(SQLException e){
              System.out.print( "erroe " + e.getMessage());
-            return false;
+            return null;
         }
     }    
 }

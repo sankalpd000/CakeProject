@@ -6,15 +6,119 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Created on : 22 Aug, 2022, 9:12:55 PM
     Author     : SankalpD
 */
+
+body{
+padding: 0px;
+margin: 0px;
+
+}
+
+.topnav{
+position: fixed;
+box-sizing: border-box;
+height: 75px;
+width: 100%;
+background-color: rgba(20, 17, 37, 1);
+display: block;
+left: 0px;
+top: 0px;
+  z-index: 9;
+border: 3px solid #000000;
+}
+#home{
+    float:left;
+}
+
+.topnav div{
+    float: left;
+  
+}
+
+.topnav a{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+ .topnav input[type=text] {
+width: 661px;
+height: 40px;
+ }
+ #searchdiv{
+     width: 50%;
+     padding: 17px 00px 15px 40px;
+    text-align:center;
+ }
+ #search{
+     padding: 0px 0px 0px 0px;
+ }
+ #account{
+     color: white;
+     padding: 20px 20px 20px 20px;
+     float: right;
+ }
+ #contact{
+     text-decoration:none;
+     color: white;
+     text-align: center;
+     padding: 20px 20px 20px 20px;
+     float: right;
+ }
+ #groupAC{
+     float: right;
+     padding: 0px 0px 0px 180px;
+ }
+
+.dropbtn {
+   background-color:rgba(20, 17, 37, 1);
+   color: white;
+  padding: 20px 20px 20px 20px;
+  font-size: 15px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover 
+{background-color: #ddd;}
+.dropdown:hover .dropdown-content 
+{display: block;}
+.dropdown:hover .dropbtn 
+{opacity: 0.6}
+
 .Adminform{
-    width: 30%;
-    background-color: plum;
-    height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0);
-    display: block;
-    margin: 10px;
-    border-radius: 15px;
-    padding: 30px;
+    font-family: roboto;
+    margin:0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: blue;
+    height: 170px;
+    width: 297px;
+    background-color: rgb(255 255 255);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    float: left;
+    top: 45%;
+    left: 17%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(176 77 77 / 10%);
+    box-shadow: 0 0 18px rgba(139 131 203 / 60%);
+    padding: 50px 35px;
 }
 
 .Adminform #btn{
@@ -24,6 +128,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     padding: 10px;
     margin-top: 20px;
     border: 0px;
+}
+
+#header{
+   
+    justify-content: center;
+    color:white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 43px;
 }
 
 .Adminform .field-class{
@@ -37,4 +152,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 }
 
 .Adminform .label-class{
+}
+
+.adminBanner{
+      position: relative;
+   padding: 10px 0px 0px 0px;
+   margin:40px 0 5px 0px;
+    background-color: orange;
+}
+
+
+#error-message{
+    color: red;
 }

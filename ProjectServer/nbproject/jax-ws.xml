@@ -10,6 +10,9 @@
     <service name="Product">
       <implementation-class>com.viva.Product</implementation-class>
     </service>
+    <service name="ProductList">
+      <implementation-class>com.viva.ProductList</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

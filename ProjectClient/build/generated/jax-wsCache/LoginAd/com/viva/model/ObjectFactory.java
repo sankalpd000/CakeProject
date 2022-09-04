@@ -38,6 +38,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DGuy }
+     * 
+     */
+    public DGuy createDGuy() {
+        return new DGuy();
+    }
+
+    /**
      * Create an instance of {@link Customer }
      * 
      */

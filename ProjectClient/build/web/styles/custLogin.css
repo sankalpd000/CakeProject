@@ -1,0 +1,54 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 Sep, 2022, 11:54:16 AM
+    Author     : SankalpD
+*/
+
+
+body{
+padding: 0px;
+margin: 0px;
+
+}
+
+.custBanner{
+  position: relative;
+   padding: 10px 0px 0px 0px;
+   margin:40px 0 5px 0px;
+    background-color: orange;
+}
+
+
+.custBanner h1{
+    justify-content: center;
+    color:white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 43px;
+}
+
+.Custform{
+    font-family: roboto;
+    margin:0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: blue;
+    height: 170px;
+    width: 297px;
+    background-color: rgb(255 255 255);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    float: left;
+    top: 45%;
+    left: 17%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(176 77 77 / 10%);
+    box-shadow: 0 0 18px rgba(139 131 203 / 60%);
+    padding: 50px 35px;
+}
+

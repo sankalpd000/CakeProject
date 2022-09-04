@@ -16,11 +16,36 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>Customer Log In</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <<link rel="stylesheet" href="styles/custLogin.css"/>
+        <link rel="stylesheet" href="styles/topnav.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Poppins:wght@500;600;700&family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
+       <div class="topnav" align="center">
+            <div><a href="index.jsp" class="active" id="home">
+                    <img src="images\logo.png" alt="homepage" width="80px" height="30px"></a>
+            </div>
+            <div id="searchdiv" >
+              <input type="text" placeholder="Search.." id="search"> 
+            </div>
+            <div id="groupAC">
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button> 
+                      <div class="dropdown-content">
+                        <a href="custLogin.jsp">Customer</a>
+                        <a href="dguyLogin.html">Delivery Guy</a>
+                        <a href="adminLogin.html">Admin</a>
+                      </div>
+                </div>  
+                <div><a href="Contact.html" id="contact">Contact</a></div>
+            </div>
+      </div>
          <div class="custBanner">
             <h1>Customer</h1>
         </div>
+        
         <div class="Custform" autocomplete="on">
             <form action="">
                 <label for="Cmail">Enter Username OR Email:</label><br>
@@ -68,7 +93,7 @@ return null;
                 
                 <input type="submit" value="LogIN"><br><br>
             </form>
-            <a href="custSignup.html">Create new account</a>
+            <a href="custReg.jsp">Create new account</a>
         </div>
     </body>
 </html>
