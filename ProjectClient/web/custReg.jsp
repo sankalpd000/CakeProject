@@ -11,6 +11,12 @@
          <title>Customer Log In</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <link rel="stylesheet" href="styles/topnav.css">
+      <link rel="stylesheet" href="styles/styleall.css">
+      <link rel="stylesheet" href="styles/formStyle.css">
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Poppins:wght@500;600;700&family=Roboto&display=swap" rel="stylesheet">
+   
     </head>
     <body>
         <!DOCTYPE html>
@@ -22,11 +28,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 
 
     <body>
-                <div class="signupBanner">
+        <div class="topnav" align="center">
+            <div><a href="index.jsp" class="active" id="home">
+                    <img src="images\logo.png" alt="homepage" width="80px" height="30px"></a>
+            </div>
+            <div id="searchdiv" >
+              <input type="text" placeholder="Search.." id="search"> 
+            </div>
+            <div id="groupAC">
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button> 
+                      <div class="dropdown-content">
+                        <a href="custLogin.jsp">Customer</a>
+                            <a href="DLogin.jsp">Delivery Guy</a>
+                            <a href="adminLogin.jsp">Admin</a>
+                      </div>
+                </div>  
+                <div><a href="Contact.html" id="contact">Contact</a></div>
+            </div>
+        </div>
+        <div class="Banner">
             <h1>Create new account</h1>
         </div>
-        <div class="Signupform" autocomplete="off">
-            <form action="">
+        <div class="form" autocomplete="off">
+            <form action="" method="post">
                 <label for="CUname">Username:</label><br>
                 <input type="text" id="CUname" name="CUname" required>
                 <br><br>
@@ -45,7 +70,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <input type="password" id="createCpass" name="txtnewCpass" required>
                 <br><br>
                 
-                 <%-- start web service invocation --%><hr/>
+                 <%-- start web service invocation --%>
     <%
     try {
             String d1 = request.getParameter("CUname");
@@ -65,12 +90,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 	java.lang.String cPass = d6;
 	// TODO process result here
 	boolean result = port.signCust(cUname, cName, cAdd, cPhn, cMail, cPass);
-	out.println("Result = "+result);
+	System.out.println("Result = "+result);
     } catch (Exception ex) {
 	// TODO handle custom exceptions here
     }
     %>
-    <%-- end web service invocation --%><hr/>
+    <%-- end web service invocation --%>
           
                 <input type="submit" value="Submit"><br><br>
             </form>

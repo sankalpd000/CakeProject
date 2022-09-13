@@ -1,0 +1,34 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 Sep, 2022, 11:54:16 AM
+    Author     : SankalpD
+*/
+
+
+body{
+padding: 0px;
+margin: 0px;
+
+}
+
+.Banner{
+  position: relative;
+   padding: 10px 0px 0px 0px;
+   margin:40px 0 5px 0px;
+    background-color: orange;
+}
+
+
+.Banner h1{
+     justify-content: center;
+    color:white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 43px;
+}
+

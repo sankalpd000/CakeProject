@@ -18,9 +18,13 @@ import java.sql.*;
 @WebService(serviceName = "SignUp")
 public class SignUp {
 
-    @Resource(name = "ref2")
-    private DataSource ref2;
+    @Resource(name = "refr2")
+    private DataSource refr2;
 
+    //@Resource(name = "ref2")
+    //private DataSource ref2;
+
+    
     /**
      * Web service operation
      * @param c_uname
@@ -39,7 +43,7 @@ public class SignUp {
             @WebParam(name = "c_mail") String c_mail, 
             @WebParam(name = "c_pass") String c_pass) {
         try{
-            Connection c = ref2.getConnection();
+            Connection c = refr2.getConnection();
             PreparedStatement ps=c.prepareStatement("insert INTO CUSTOMER(C_UNAME,C_NAME,C_ADDRESS,C_PHN,C_MAIL,C_PASS) VALUES(?,?,?,?,?,?)");
             ps.setString(1, c_uname);
             ps.setString(2, c_name);
@@ -70,7 +74,7 @@ public class SignUp {
     @WebMethod(operationName = "signDguy")
     public boolean signDguy(@WebParam(name = "d_uname") String d_uname, @WebParam(name = "d_name") String d_name, @WebParam(name = "d_phn") String d_phn, @WebParam(name = "d_mail") String d_mail, @WebParam(name = "d_pass") String d_pass) {
      try{
-            Connection d = ref2.getConnection();
+            Connection d = refr2.getConnection();
             PreparedStatement ps=d.prepareStatement("insert INTO DGUY(D_UNAME,D_NAME,D_PHN,D_MAIL,D_PASS) VALUES(?,?,?,?,?)");
             ps.setString(1, d_uname);
             ps.setString(2, d_name);

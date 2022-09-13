@@ -7,6 +7,7 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
+import javax.xml.ws.FaultAction;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 
@@ -17,7 +18,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "Product", targetNamespace = "http://viva.com/")
+@WebService(name = "product", targetNamespace = "http://viva.com/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -26,29 +27,36 @@ public interface Product {
 
     /**
      * 
-     * @param pStock
-     * @param pPrice
-     * @param pName
-     * @param pImg
-     * @param pDesc
+     * @param img
+     * @param price
+     * @param name
+     * @param stock
+     * @param desc
      * @return
      *     returns java.lang.Boolean
+     * @throws Base64DecodingException_Exception
+     * @throws FileNotFoundException_Exception
      */
     @WebMethod
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "addProduct", targetNamespace = "http://viva.com/", className = "com.viva.AddProduct")
     @ResponseWrapper(localName = "addProductResponse", targetNamespace = "http://viva.com/", className = "com.viva.AddProductResponse")
-    @Action(input = "http://viva.com/Product/addProductRequest", output = "http://viva.com/Product/addProductResponse")
+    @Action(input = "http://viva.com/product/addProductRequest", output = "http://viva.com/product/addProductResponse", fault = {
+        @FaultAction(className = FileNotFoundException_Exception.class, value = "http://viva.com/product/addProduct/Fault/FileNotFoundException"),
+        @FaultAction(className = Base64DecodingException_Exception.class, value = "http://viva.com/product/addProduct/Fault/Base64DecodingException")
+    })
     public Boolean addProduct(
-        @WebParam(name = "p_name", targetNamespace = "")
-        String pName,
-        @WebParam(name = "p_desc", targetNamespace = "")
-        String pDesc,
-        @WebParam(name = "p_price", targetNamespace = "")
-        int pPrice,
-        @WebParam(name = "p_stock", targetNamespace = "")
-        int pStock,
-        @WebParam(name = "p_img", targetNamespace = "")
-        String pImg);
+        @WebParam(name = "name", targetNamespace = "")
+        String name,
+        @WebParam(name = "desc", targetNamespace = "")
+        String desc,
+        @WebParam(name = "price", targetNamespace = "")
+        int price,
+        @WebParam(name = "stock", targetNamespace = "")
+        int stock,
+        @WebParam(name = "img", targetNamespace = "")
+        String img)
+        throws Base64DecodingException_Exception, FileNotFoundException_Exception
+    ;
 
 }

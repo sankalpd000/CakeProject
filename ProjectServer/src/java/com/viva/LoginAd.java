@@ -19,9 +19,13 @@ import javax.sql.DataSource;
 @WebService(serviceName = "LoginAd")
 public class LoginAd {
 
-    @Resource(name = "ref1")
-    private DataSource ref1;
+    @Resource(name = "refr1")
+    private DataSource refr1;
 
+    //@Resource(name = "ref1")
+   // private DataSource ref1;
+    
+    
     /**
      * Web service operation
      * @param mail
@@ -31,7 +35,7 @@ public class LoginAd {
     @WebMethod(operationName = "login")
     public Admin login(@WebParam(name = "mail") String mail, @WebParam(name = "pass") String pass) {
          try{
-            Connection d = ref1.getConnection();
+            Connection d = refr1.getConnection();
             PreparedStatement ps=d.prepareStatement("SELECT * FROM ADMIN WHERE A_MAIL=? and A_PASS=?");
             ps.setString(1, mail);
             ps.setString(2, pass);
@@ -63,7 +67,7 @@ public class LoginAd {
     @WebMethod(operationName = "loginCust")
     public Customer loginCust(@WebParam(name = "c_uname") String c_uname, @WebParam(name = "c_pass") String c_pass) {
          try{
-            Connection d = ref1.getConnection();
+            Connection d = refr1.getConnection();
             PreparedStatement ps=d.prepareStatement("SELECT * FROM CUSTOMER WHERE (C_UNAME=? OR C_MAIL=?) and C_PASS=?");
             ps.setString(1, c_uname);
             ps.setString(2, c_uname);
@@ -100,7 +104,7 @@ public class LoginAd {
     @WebMethod(operationName = "loginDguy")
     public DGuy loginDguy(@WebParam(name = "d_uname") String d_uname, @WebParam(name = "d_pass") String d_pass) {
 try{
-            Connection d = ref1.getConnection();
+            Connection d = refr1.getConnection();
             PreparedStatement ps=d.prepareStatement("SELECT * FROM DGUY WHERE (D_UNAME=? or D_MAIL=?) and D_PASS=?");
             ps.setString(1, d_uname);
             ps.setString(2, d_uname);

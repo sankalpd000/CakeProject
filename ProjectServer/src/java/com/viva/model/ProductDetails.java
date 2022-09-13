@@ -5,13 +5,18 @@
 package com.viva.model;
 
 import java.sql.Blob;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  *
  * @author SankalpD
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Customer", namespace="http://model.viva.com/")
 public class ProductDetails {
-     private String name;
+    private String name;
     
     private String desc;
     

@@ -58,21 +58,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/com/viva"/>
         <delete dir="${build.generated.dir}/jax-wsCache/SignUp"/>
     </target>
-    <target name="wsimport-client-Product" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/Product"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Product" destdir="${build.generated.dir}/jax-wsCache/Product" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ProjectServer/Product.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/Product?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Product/wsdl/localhost_8080/ProjectServer/Product.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/Product"/>
+    <target name="wsimport-client-product" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/product"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/product" destdir="${build.generated.dir}/jax-wsCache/product" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/product/wsdl/localhost_8080/ProjectServer/product.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/product?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/product/wsdl/localhost_8080/ProjectServer/product.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/product"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/Product">
+            <fileset dir="${build.generated.dir}/jax-wsCache/product">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-Product" depends="-init-project">
+    <target name="wsimport-client-clean-product" depends="-init-project">
         <delete dir="${build.generated.sources.dir}/jax-ws/com/viva"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/Product"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/product"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-LoginAd, wsimport-client-SignUp, wsimport-client-Product"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-LoginAd, wsimport-client-SignUp, wsimport-client-product"/>
 </project>

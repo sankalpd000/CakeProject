@@ -66,9 +66,9 @@
         </wsimport-option>
       </wsimport-options>
     </client>
-    <client name="Product">
-      <wsdl-url>http://localhost:8080/ProjectServer/Product?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/ProjectServer/Product.wsdl</local-wsdl-file>
+    <client name="product">
+      <wsdl-url>http://localhost:8080/ProjectServer/product?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/ProjectServer/product.wsdl</local-wsdl-file>
       <package-name>com.viva</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -86,7 +86,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/ProjectServer/Product?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/ProjectServer/product?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

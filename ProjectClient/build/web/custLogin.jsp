@@ -16,7 +16,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>Customer Log In</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <<link rel="stylesheet" href="styles/custLogin.css"/>
+        <link rel="stylesheet" href="styles/custLogin.css"/>
         <link rel="stylesheet" href="styles/topnav.css">
        <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +35,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <button class="dropbtn">Account</button> 
                       <div class="dropdown-content">
                         <a href="custLogin.jsp">Customer</a>
-                        <a href="dguyLogin.html">Delivery Guy</a>
-                        <a href="adminLogin.html">Admin</a>
+                            <a href="DLogin.jsp">Delivery Guy</a>
+                            <a href="adminLogin.jsp">Admin</a>
                       </div>
                 </div>  
                 <div><a href="Contact.html" id="contact">Contact</a></div>

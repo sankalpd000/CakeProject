@@ -24,6 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _Base64DecodingException_QNAME = new QName("http://viva.com/", "Base64DecodingException");
+    private final static QName _FileNotFoundException_QNAME = new QName("http://viva.com/", "FileNotFoundException");
     private final static QName _AddProduct_QNAME = new QName("http://viva.com/", "addProduct");
     private final static QName _AddProductResponse_QNAME = new QName("http://viva.com/", "addProductResponse");
 
@@ -32,6 +34,22 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link Base64DecodingException }
+     * 
+     */
+    public Base64DecodingException createBase64DecodingException() {
+        return new Base64DecodingException();
+    }
+
+    /**
+     * Create an instance of {@link FileNotFoundException }
+     * 
+     */
+    public FileNotFoundException createFileNotFoundException() {
+        return new FileNotFoundException();
     }
 
     /**
@@ -48,6 +66,48 @@ public class ObjectFactory {
      */
     public AddProductResponse createAddProductResponse() {
         return new AddProductResponse();
+    }
+
+    /**
+     * Create an instance of {@link Exception }
+     * 
+     */
+    public Exception createException() {
+        return new Exception();
+    }
+
+    /**
+     * Create an instance of {@link Throwable }
+     * 
+     */
+    public Throwable createThrowable() {
+        return new Throwable();
+    }
+
+    /**
+     * Create an instance of {@link StackTraceElement }
+     * 
+     */
+    public StackTraceElement createStackTraceElement() {
+        return new StackTraceElement();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Base64DecodingException }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://viva.com/", name = "Base64DecodingException")
+    public JAXBElement<Base64DecodingException> createBase64DecodingException(Base64DecodingException value) {
+        return new JAXBElement<Base64DecodingException>(_Base64DecodingException_QNAME, Base64DecodingException.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FileNotFoundException }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://viva.com/", name = "FileNotFoundException")
+    public JAXBElement<FileNotFoundException> createFileNotFoundException(FileNotFoundException value) {
+        return new JAXBElement<FileNotFoundException>(_FileNotFoundException_QNAME, FileNotFoundException.class, null, value);
     }
 
     /**

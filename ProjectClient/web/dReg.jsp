@@ -10,6 +10,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <link rel="stylesheet" href="styles/topnav.css">
+         <link rel="stylesheet" href="styles/styleall.css">
+              <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Poppins:wght@500;600;700&family=Roboto&display=swap" rel="stylesheet">
+   
+      <link rel="stylesheet" href="styles/formStyle.css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -30,10 +36,10 @@
                 <div><a href="Contact.html" id="contact">Contact</a></div>
             </div>
       </div>
-         <div class="signupBanner">
-            <h1>Create new account</h1>
+         <div class="Banner">
+            <h1>join as Delivery guy</h1>
         </div>
-        <div class="Signupform" autocomplete="off">
+        <div class="form" autocomplete="off">
             <form action="">
                 <label for="DUname">Username:</label><br>
                 <input type="text" id="DUname" name="DUname" required>
@@ -50,7 +56,7 @@
                 <input type="password" id="createDpass" name="txtnewDpass" required>
                 <br><br>  
                 
-                 <%-- start web service invocation --%><hr/>
+                 <%-- start web service invocation --%>
     <%
     try {
            String d1 = request.getParameter("DUname");
@@ -68,12 +74,12 @@
 	java.lang.String dPass = d5;
 	// TODO process result here
 	boolean result = port.signDguy(dUname, dName, dPhn, dMail, dPass);
-	out.println("Result = "+result);
+	System.out.println("Result = "+result);
     } catch (Exception ex) {
 	System.out.println("error:" + ex.getMessage());
     }
     %>
-    <%-- end web service invocation --%><hr/>
+    <%-- end web service invocation --%>
                 
                 <input type="submit" value="Submit"><br><br>
             </form>

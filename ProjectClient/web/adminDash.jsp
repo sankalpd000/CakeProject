@@ -10,16 +10,37 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+      <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="styles/adminDash.css">
-        <link rel="stylesheet" href="styles/snackbarStyle.css">
         <link rel="stylesheet" href="styles/topnav.css">
-          <title>Admin dashboard</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/styleall.css">
+      <link rel="stylesheet" href="styles/formStyle.css">
+      <link rel="stylesheet" href="styles/adminDash.css">
+        <<link rel="stylesheet" href="styles/custLogin.css"/>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Poppins:wght@500;600;700&family=Roboto&display=swap">
+        <title>JSP Page</title>
+
     </head>
     <body>
+             <div class="topnav" align="center">
+            <div><a href="index.jsp" class="active" id="home"><img src="images\logo.png" alt="homepage" width="80px" height="30px"></a></div>
+            <div id="searchdiv" >
+              <input type="text" placeholder="Search.." id="search"> 
+            </div>
+            <div id="groupAC">
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button> 
+                      <div class="dropdown-content">
+                        <a href="custLogin.jsp">Customer</a>
+                        <a href="DLogin.jsp">Delivery Guy</a>
+                        <a href="adminLogin.jsp">Admin</a>
+                      </div>
+                </div>  
+                <div><a href="Contact.html" id="contact">Contact</a></div>
+            </div>
+      </div>
         <script type="text/javascript" src="js/snackbarController.js"></script>
         <script type="text/javascript" src="js/popupBox.js"></script>
        
@@ -32,85 +53,13 @@
             }
         %>
         
-         <div class="banner">
-            <h1>Admin Dashboard</h1>
+         <div class="custBanner">
+            <h1 id="name">Admin Dashboard</h1>
         </div>
-        <div><button id="add">Add product</button></div>
-        <div><button id="orders">Orders</button></div>
-        
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <h1>add product</h1>
-            <span id="close">&times;</span>
-            <form action="" method="post" onsubmit="return false" >
-                <input type="text" placeholder="Product Name" name="P_NAME" required><br>
-                <input type="text" placeholder="Description" name="P_DES" required><br>
-                <input type="text" placeholder="Price" name="P_PRICE" required><br>
-                <input type="text" placeholder="Stock" name="P_STOCK" required><br>
-                <input type="file" name="P_ICON" required><br>
-                <input type="submit" value="Add product">
-            </form>
-            </div>
+        <div class="btn">
+        <div><button  id="add" onclick="document.location='addprod.jsp'">Add product</button></div>
+        <div><button id="orders" onclick="document.location='orderlist.jsp'">Orders</button></div>
         </div>
-         <script>
-            
-        </script>
-    <% 
-        try{
-        String p2= request.getParameter("P_NAME");
-        String p3= request.getParameter("P_DES");
-        int p4= Integer.parseInt(request.getParameter("P_PRICE"));
-        int p5= Integer.parseInt(request.getParameter("P_STOCK"));
-        //String p6= request.getParameter("P_ICON");
-        //Part filePart = request.getPart("P_ICON");
-        //String fileName = filePart.getSubmittedFileName();
-
-        String p6= request.getParameter("P_ICON");
-        System.out.println("image path "+ p6);
-        
-        if(p2 != null ){
-            Boolean P= PRODUCT(p2,p3,p4,p5,p6);
-            if(P){
-              %>
-              <script type="text/javascript">
-                  //myFunction("Product added successfully!");
-                  </script>
-                <h3> Product added successfully!</h3>      
-             <%  
-            }
-            else{
-            %>
-              <script type="text/javascript">
-                  //myFunction("Product not added successfully.. please try again.");
-                  </script>
-                <h3> Product not added successfully.. please try again.</h3>      
-             <%
-            }
-        }
-        
-        }catch (Exception ex){
-            System.out.println("error "+ ex.getLocalizedMessage());
-        }
-
-    %>
-    <!-- The actual snackbar -->
-<div id="snackbar">Some text some message..</div>
-
-
-    <%!
-        public Boolean PRODUCT(String pName,String pDesc,int pPrice,int pStock, String pImg){
-            try {
-
-                com.viva.Product_Service service = new com.viva.Product_Service();
-                com.viva.Product port = service.getProductPort();
-                return port.addProduct(pName, pDesc, pPrice, pStock, pImg);
-
-            } catch (Exception ex) {
-                System.out.println("error"+ ex.getMessage());
-                return false;
-            }
-        }
-    %>
 
     </body>
 </html>

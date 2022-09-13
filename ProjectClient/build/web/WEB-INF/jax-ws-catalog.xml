@@ -13,4 +13,6 @@
     <system systemId="http://localhost:8080/ProjectServer/LoginAd?xsd=2" uri="wsdl/localhost_8080/ProjectServer/LoginAd.xsd_2.xsd"/>
     <system systemId="http://localhost:8080/ProjectServer/Product?wsdl" uri="wsdl/localhost_8080/ProjectServer/Product.wsdl"/>
     <system systemId="http://localhost:8080/ProjectServer/Product?xsd=1" uri="wsdl/localhost_8080/ProjectServer/Product.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/product?wsdl" uri="wsdl/localhost_8080/ProjectServer/product.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/product?xsd=1" uri="wsdl/localhost_8080/ProjectServer/product.xsd_1.xsd"/>
 </catalog>

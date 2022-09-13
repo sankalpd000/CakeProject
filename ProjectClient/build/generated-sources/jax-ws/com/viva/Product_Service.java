@@ -17,20 +17,20 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "Product", targetNamespace = "http://viva.com/", wsdlLocation = "http://localhost:8080/ProjectServer/Product?wsdl")
+@WebServiceClient(name = "product", targetNamespace = "http://viva.com/", wsdlLocation = "http://localhost:8080/ProjectServer/product?wsdl")
 public class Product_Service
     extends Service
 {
 
     private final static URL PRODUCT_WSDL_LOCATION;
     private final static WebServiceException PRODUCT_EXCEPTION;
-    private final static QName PRODUCT_QNAME = new QName("http://viva.com/", "Product");
+    private final static QName PRODUCT_QNAME = new QName("http://viva.com/", "product");
 
     static {
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/ProjectServer/Product?wsdl");
+            url = new URL("http://localhost:8080/ProjectServer/product?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
@@ -67,9 +67,9 @@ public class Product_Service
      * @return
      *     returns Product
      */
-    @WebEndpoint(name = "ProductPort")
+    @WebEndpoint(name = "productPort")
     public Product getProductPort() {
-        return super.getPort(new QName("http://viva.com/", "ProductPort"), Product.class);
+        return super.getPort(new QName("http://viva.com/", "productPort"), Product.class);
     }
 
     /**
@@ -79,9 +79,9 @@ public class Product_Service
      * @return
      *     returns Product
      */
-    @WebEndpoint(name = "ProductPort")
+    @WebEndpoint(name = "productPort")
     public Product getProductPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://viva.com/", "ProductPort"), Product.class, features);
+        return super.getPort(new QName("http://viva.com/", "productPort"), Product.class, features);
     }
 
     private static URL __getWsdlLocation() {

@@ -10,6 +10,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="styles/topnav.css">
+        <link rel="stylesheet" href="styles/styleall.css">
+      <link rel="stylesheet" href="styles/formStyle.css">
+        <<link rel="stylesheet" href="styles/custLogin.css"/>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Poppins:wght@500;600;700&family=Roboto&display=swap">
         <title>JSP Page</title>
     </head>
     <body>
@@ -30,12 +36,12 @@
                 <div><a href="Contact.html" id="contact">Contact</a></div>
             </div>
       </div>
-        <div class="banner">
+        <div class="custBanner">
             <h1>Delivery Guy</h1>
         </div>
-        <div class=""" autocomplete="on">
+        <div class="Custform" autocomplete="on">
             <form>
-                <label for="Dmail">Enter Email ID:</label><br>
+                <label for="Dmail">Enter Username OR Email:</label><br>
                 <input type="email" placeholder="example123@examle.com" id="Dmail" name="txtDmail" required><br><br>
                 <label for="Dpass">Enter password:</label><br>
                 <input type="password" id="Dpass" name="txtDpass" required><br><br>
