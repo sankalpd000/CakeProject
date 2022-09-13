@@ -57,7 +57,7 @@
             <h1 id="name">Admin Dashboard</h1>
         </div>
         <div class="btn">
-        <div><button  id="add" onclick="document.location='addprod.jsp'">Add product</button></div>
+        <div><button  id="add" onclick="document.location='addprod2.jsp'">Add product</button></div>
         <div><button id="orders" onclick="document.location='orderlist.jsp'">Orders</button></div>
         </div>
 

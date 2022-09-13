@@ -16,12 +16,22 @@
 <message name="Base64DecodingException">
 <part name="fault" element="tns:Base64DecodingException"/>
 </message>
+<message name="AddPro">
+<part name="parameters" element="tns:AddPro"/>
+</message>
+<message name="AddProResponse">
+<part name="parameters" element="tns:AddProResponse"/>
+</message>
 <portType name="product">
 <operation name="addProduct">
 <input wsam:Action="http://viva.com/product/addProductRequest" message="tns:addProduct"/>
 <output wsam:Action="http://viva.com/product/addProductResponse" message="tns:addProductResponse"/>
 <fault message="tns:FileNotFoundException" name="FileNotFoundException" wsam:Action="http://viva.com/product/addProduct/Fault/FileNotFoundException"/>
 <fault message="tns:Base64DecodingException" name="Base64DecodingException" wsam:Action="http://viva.com/product/addProduct/Fault/Base64DecodingException"/>
+</operation>
+<operation name="AddPro">
+<input wsam:Action="http://viva.com/product/AddProRequest" message="tns:AddPro"/>
+<output wsam:Action="http://viva.com/product/AddProResponse" message="tns:AddProResponse"/>
 </operation>
 </portType>
 <binding name="productPortBinding" type="tns:product">
@@ -40,6 +50,15 @@
 <fault name="Base64DecodingException">
 <soap:fault name="Base64DecodingException" use="literal"/>
 </fault>
+</operation>
+<operation name="AddPro">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
 </operation>
 </binding>
 <service name="product">

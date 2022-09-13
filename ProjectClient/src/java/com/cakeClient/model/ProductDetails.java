@@ -4,7 +4,6 @@
  */
 package com.cakeClient.model;
 
-import java.sql.Blob;
 
 /**
  *
@@ -19,7 +18,7 @@ public class ProductDetails {
     
     private int stock;
     
-    private Blob img;
+    private String img;
 
     public String getName() {
         return name;
@@ -53,11 +52,11 @@ public class ProductDetails {
         this.stock = stock;
     }
 
-    public Blob getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(Blob img) {
+    public void setImg(String img) {
         this.img = img;
     }
     

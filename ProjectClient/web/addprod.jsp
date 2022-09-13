@@ -51,7 +51,7 @@
                 <input type="file" id="file" name="P_ICON" accept=".png, .jpg, .jpeg" onchange="getBase64()" required><br>
                 <input type="hidden" id="imgpath" name="imgpath" value="">
                 
-                <%
+                <%--      <%
                     int count = 0;
                     try {
                         String d1 = request.getParameter("P_NAME");
@@ -95,12 +95,41 @@
                         ex.printStackTrace();
                         System.out.println("error end "+ ex.getMessage());
                     }
-                %>
+                %> --%>
+                
+                <%-- start web service invocation --%><hr/>
+            <%
+            String d1 = request.getParameter("P_NAME");
+            String d2 = request.getParameter("P_DES");
+            int d3 = Integer.parseInt(request.getParameter("P_PRICE"));
+            int d4 = Integer.parseInt(request.getParameter("P_STOCK"));
+            Part  part = request.getPart("P_ICON");
+            
+            if(d1 != null && d2 != null ){
+                try {
+                    com.viva.Product_Service service = new com.viva.Product_Service();
+                    com.viva.Product port = service.getProductPort();
+                     // TODO initialize WS operation arguments here
+                    java.lang.String pName = d1;
+                    java.lang.String pDesc = d2;
+                    int pPrice = d3;
+                    int pStock = d4;
+                    java.lang.String pImg = part.getSubmittedFileName();
+                    // TODO process result here
+                    java.lang.Boolean result = port.addPro(pName, pDesc, pPrice, pStock, pImg);
+                    out.println("Result = "+result);
+                } catch (Exception ex) {
+                    System.out.println("error"+ ex.getMessage());
+                }
+            }
+            %>
+    <%-- end web service invocation --%><hr/>
+                
                 <br>
                 <input type="submit" value="Add product">
             </form>
             </div>
     
-        <script type="text/javascript" src="js/prod.js"></script>
+    
     </body>
 </html>

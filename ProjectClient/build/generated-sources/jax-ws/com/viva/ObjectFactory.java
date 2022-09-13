@@ -24,6 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _AddPro_QNAME = new QName("http://viva.com/", "AddPro");
+    private final static QName _AddProResponse_QNAME = new QName("http://viva.com/", "AddProResponse");
     private final static QName _Base64DecodingException_QNAME = new QName("http://viva.com/", "Base64DecodingException");
     private final static QName _FileNotFoundException_QNAME = new QName("http://viva.com/", "FileNotFoundException");
     private final static QName _AddProduct_QNAME = new QName("http://viva.com/", "addProduct");
@@ -34,6 +36,22 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link AddPro }
+     * 
+     */
+    public AddPro createAddPro() {
+        return new AddPro();
+    }
+
+    /**
+     * Create an instance of {@link AddProResponse }
+     * 
+     */
+    public AddProResponse createAddProResponse() {
+        return new AddProResponse();
     }
 
     /**
@@ -90,6 +108,24 @@ public class ObjectFactory {
      */
     public StackTraceElement createStackTraceElement() {
         return new StackTraceElement();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddPro }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://viva.com/", name = "AddPro")
+    public JAXBElement<AddPro> createAddPro(AddPro value) {
+        return new JAXBElement<AddPro>(_AddPro_QNAME, AddPro.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddProResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://viva.com/", name = "AddProResponse")
+    public JAXBElement<AddProResponse> createAddProResponse(AddProResponse value) {
+        return new JAXBElement<AddProResponse>(_AddProResponse_QNAME, AddProResponse.class, null, value);
     }
 
     /**

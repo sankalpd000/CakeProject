@@ -40,7 +40,7 @@ public class Product {
                productDetail.setDesc(rs.getString("P_DESC"));
                productDetail.setPrice(rs.getInt("P_PRICE"));
                productDetail.setStock(rs.getInt("P_STOCK"));
-               productDetail.setImg(rs.getBlob("P_IMG"));
+               productDetail.setImg(rs.getString("P_IMG"));
                
                productDetails.add(productDetail);
            }
