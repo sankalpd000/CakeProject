@@ -24,12 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _AddPro_QNAME = new QName("http://viva.com/", "AddPro");
-    private final static QName _AddProResponse_QNAME = new QName("http://viva.com/", "AddProResponse");
-    private final static QName _Base64DecodingException_QNAME = new QName("http://viva.com/", "Base64DecodingException");
-    private final static QName _FileNotFoundException_QNAME = new QName("http://viva.com/", "FileNotFoundException");
-    private final static QName _AddProduct_QNAME = new QName("http://viva.com/", "addProduct");
-    private final static QName _AddProductResponse_QNAME = new QName("http://viva.com/", "addProductResponse");
+    private final static QName _Order_QNAME = new QName("http://viva.com/", "Order");
+    private final static QName _OrderResponse_QNAME = new QName("http://viva.com/", "OrderResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.viva
@@ -39,129 +35,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AddPro }
+     * Create an instance of {@link Order_Type }
      * 
      */
-    public AddPro createAddPro() {
-        return new AddPro();
+    public Order_Type createOrder_Type() {
+        return new Order_Type();
     }
 
     /**
-     * Create an instance of {@link AddProResponse }
+     * Create an instance of {@link OrderResponse }
      * 
      */
-    public AddProResponse createAddProResponse() {
-        return new AddProResponse();
+    public OrderResponse createOrderResponse() {
+        return new OrderResponse();
     }
 
     /**
-     * Create an instance of {@link Base64DecodingException }
+     * Create an instance of {@link JAXBElement }{@code <}{@link Order_Type }{@code >}}
      * 
      */
-    public Base64DecodingException createBase64DecodingException() {
-        return new Base64DecodingException();
+    @XmlElementDecl(namespace = "http://viva.com/", name = "Order")
+    public JAXBElement<Order_Type> createOrder(Order_Type value) {
+        return new JAXBElement<Order_Type>(_Order_QNAME, Order_Type.class, null, value);
     }
 
     /**
-     * Create an instance of {@link FileNotFoundException }
+     * Create an instance of {@link JAXBElement }{@code <}{@link OrderResponse }{@code >}}
      * 
      */
-    public FileNotFoundException createFileNotFoundException() {
-        return new FileNotFoundException();
-    }
-
-    /**
-     * Create an instance of {@link AddProduct }
-     * 
-     */
-    public AddProduct createAddProduct() {
-        return new AddProduct();
-    }
-
-    /**
-     * Create an instance of {@link AddProductResponse }
-     * 
-     */
-    public AddProductResponse createAddProductResponse() {
-        return new AddProductResponse();
-    }
-
-    /**
-     * Create an instance of {@link Exception }
-     * 
-     */
-    public Exception createException() {
-        return new Exception();
-    }
-
-    /**
-     * Create an instance of {@link Throwable }
-     * 
-     */
-    public Throwable createThrowable() {
-        return new Throwable();
-    }
-
-    /**
-     * Create an instance of {@link StackTraceElement }
-     * 
-     */
-    public StackTraceElement createStackTraceElement() {
-        return new StackTraceElement();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddPro }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://viva.com/", name = "AddPro")
-    public JAXBElement<AddPro> createAddPro(AddPro value) {
-        return new JAXBElement<AddPro>(_AddPro_QNAME, AddPro.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddProResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://viva.com/", name = "AddProResponse")
-    public JAXBElement<AddProResponse> createAddProResponse(AddProResponse value) {
-        return new JAXBElement<AddProResponse>(_AddProResponse_QNAME, AddProResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Base64DecodingException }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://viva.com/", name = "Base64DecodingException")
-    public JAXBElement<Base64DecodingException> createBase64DecodingException(Base64DecodingException value) {
-        return new JAXBElement<Base64DecodingException>(_Base64DecodingException_QNAME, Base64DecodingException.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FileNotFoundException }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://viva.com/", name = "FileNotFoundException")
-    public JAXBElement<FileNotFoundException> createFileNotFoundException(FileNotFoundException value) {
-        return new JAXBElement<FileNotFoundException>(_FileNotFoundException_QNAME, FileNotFoundException.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddProduct }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://viva.com/", name = "addProduct")
-    public JAXBElement<AddProduct> createAddProduct(AddProduct value) {
-        return new JAXBElement<AddProduct>(_AddProduct_QNAME, AddProduct.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddProductResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://viva.com/", name = "addProductResponse")
-    public JAXBElement<AddProductResponse> createAddProductResponse(AddProductResponse value) {
-        return new JAXBElement<AddProductResponse>(_AddProductResponse_QNAME, AddProductResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://viva.com/", name = "OrderResponse")
+    public JAXBElement<OrderResponse> createOrderResponse(OrderResponse value) {
+        return new JAXBElement<OrderResponse>(_OrderResponse_QNAME, OrderResponse.class, null, value);
     }
 
 }

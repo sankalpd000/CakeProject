@@ -1,0 +1,35 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 20 Sep, 2022, 8:50:26 PM
+    Author     : SankalpD
+*/
+
+#otp-text {
+    text-align: center;
+}
+
+.receipt{
+    font-family: roboto;
+    margin-right:50%;
+    margin-left:50%;
+    padding: 0px 0px 0px 0px;
+    background-color: blue;
+    width: 297px;
+    background-color: rgb(255 255 255);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    float: left;
+    top: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(176 77 77 / 10%);
+    box-shadow: 0 0 18px rgba(139 131 203 / 60%);
+    padding: 20px;
+}
+
+
+  
+  

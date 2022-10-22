@@ -10,6 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 body{
 padding: 0px;
 margin: 0px;
+background-color: #efefef;
 
 }
 
@@ -59,6 +60,7 @@ height: 40px;
  #contact{
      text-decoration:none;
      color: white;
+     font-family: 'Poppins';
      text-align: center;
      padding: 20px 20px 20px 20px;
      float: right;
@@ -71,8 +73,9 @@ height: 40px;
 .dropbtn {
    background-color:rgba(20, 17, 37, 1);
    color: white;
+   font-family: 'Poppins';
   padding: 20px 20px 20px 20px;
-  font-size: 15px;
+  font-size: 17px;
   border: none;
 }
 
@@ -83,6 +86,9 @@ height: 40px;
 .dropdown-content {
   display: none;
   position: absolute;
+      left: 80px;
+    top: 53px;
+    font-family: 'Poppins';
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -118,20 +124,42 @@ height: 40px;
 }
 
 .product-card .img{
-    width: 100%;
+        width: 100%;
     height: auto;
     display: block;
-  border-radius: 25px;
+    padding-left: 0px;
+    border-radius: 25px;
+    padding-right: 12px;
+    padding-top: 15px;
     
 }
 .product-card .name{
-    background-color: white;
-    padding: 20px;
     
+   padding: 0px;
+    margin: 0px;
+    padding-top: 15px;
+    font-family: 'Poppins';
+    font-size: 20px;
+    padding-bottom: 0px;
 }
 
+.product-card .desc{
+        margin-bottom: 0px;
+    padding-top: 3px;
+    font-family: 'Roboto';
+}
+.product-card .price{
+    
+        font-family: 'Poppins';
+    font-size: 25px;
+}
 .grid-item{
  
+}
+.shop-item-image {
+  height: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px 0 rgb(0 0 0 / 50%);
 }
 
 
@@ -144,9 +172,22 @@ height: 40px;
  padding: 2px 16px;
  display: block;
 }
+button{
+font-family: 'Poppins';
+    background: orange;
+    color: white;
+        border-radius: 5px;
+    border: none;
+    margin-left: 146px;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    }
+
 .banner img{
   width: 100%;
   height: auto;
+  margin-top: 80px;
 }
 #myBtn{
     float:right;
@@ -161,6 +202,7 @@ height: 40px;
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
+  font-family: 'Poppins';
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
@@ -169,7 +211,16 @@ height: 40px;
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ background-color: rgb(44 43 42 / 51%); /* Black w/ opacity */
+}
+
+input[type="submit"] {
+    background-color: orange;
+    font-family: 'Poppins';
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
 }
 
 /* Modal Content */
@@ -185,7 +236,9 @@ height: 40px;
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+      padding-right: 140px;
+    font-size: 40px;
+  
   font-weight: bold;
 }
 

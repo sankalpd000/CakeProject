@@ -7,11 +7,14 @@
     <service name="SignUp">
       <implementation-class>com.viva.SignUp</implementation-class>
     </service>
-    <service name="product">
-      <implementation-class>com.viva.product</implementation-class>
-    </service>
     <service name="prod">
       <implementation-class>com.viva.prod</implementation-class>
+    </service>
+    <service name="Order">
+      <implementation-class>com.viva.Order</implementation-class>
+    </service>
+    <service name="product">
+      <implementation-class>com.viva.product</implementation-class>
     </service>
   </services>
   <clients/>

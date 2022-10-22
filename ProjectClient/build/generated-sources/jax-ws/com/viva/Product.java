@@ -27,6 +27,33 @@ public interface Product {
 
     /**
      * 
+     * @param pStock
+     * @param pPrice
+     * @param pName
+     * @param pImg
+     * @param pDesc
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod(operationName = "AddPro")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "AddPro", targetNamespace = "http://viva.com/", className = "com.viva.AddPro")
+    @ResponseWrapper(localName = "AddProResponse", targetNamespace = "http://viva.com/", className = "com.viva.AddProResponse")
+    @Action(input = "http://viva.com/product/AddProRequest", output = "http://viva.com/product/AddProResponse")
+    public Boolean addPro(
+        @WebParam(name = "pName", targetNamespace = "")
+        String pName,
+        @WebParam(name = "pDesc", targetNamespace = "")
+        String pDesc,
+        @WebParam(name = "pPrice", targetNamespace = "")
+        int pPrice,
+        @WebParam(name = "pStock", targetNamespace = "")
+        int pStock,
+        @WebParam(name = "pImg", targetNamespace = "")
+        String pImg);
+
+    /**
+     * 
      * @param img
      * @param price
      * @param name
@@ -58,32 +85,5 @@ public interface Product {
         String img)
         throws Base64DecodingException_Exception, FileNotFoundException_Exception
     ;
-
-    /**
-     * 
-     * @param pStock
-     * @param pPrice
-     * @param pName
-     * @param pImg
-     * @param pDesc
-     * @return
-     *     returns java.lang.Boolean
-     */
-    @WebMethod(operationName = "AddPro")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "AddPro", targetNamespace = "http://viva.com/", className = "com.viva.AddPro")
-    @ResponseWrapper(localName = "AddProResponse", targetNamespace = "http://viva.com/", className = "com.viva.AddProResponse")
-    @Action(input = "http://viva.com/product/AddProRequest", output = "http://viva.com/product/AddProResponse")
-    public Boolean addPro(
-        @WebParam(name = "pName", targetNamespace = "")
-        String pName,
-        @WebParam(name = "pDesc", targetNamespace = "")
-        String pDesc,
-        @WebParam(name = "pPrice", targetNamespace = "")
-        int pPrice,
-        @WebParam(name = "pStock", targetNamespace = "")
-        int pStock,
-        @WebParam(name = "pImg", targetNamespace = "")
-        String pImg);
 
 }

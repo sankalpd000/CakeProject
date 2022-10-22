@@ -19,4 +19,6 @@
     <system systemId="http://localhost:8080/ProjectServer/Product?xsd=1" uri="src/conf/xml-resources/web-service-references/Product/wsdl/localhost_8080/ProjectServer/Product.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ProjectServer/product?wsdl" uri="src/conf/xml-resources/web-service-references/product/wsdl/localhost_8080/ProjectServer/product.wsdl"/>
     <system systemId="http://localhost:8080/ProjectServer/product?xsd=1" uri="src/conf/xml-resources/web-service-references/product/wsdl/localhost_8080/ProjectServer/product.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ProjectServer/Order?wsdl" uri="src/conf/xml-resources/web-service-references/Order/wsdl/localhost_8080/ProjectServer/Order.wsdl"/>
+    <system systemId="http://localhost:8080/ProjectServer/Order?xsd=1" uri="src/conf/xml-resources/web-service-references/Order/wsdl/localhost_8080/ProjectServer/Order.xsd_1.xsd"/>
 </catalog>

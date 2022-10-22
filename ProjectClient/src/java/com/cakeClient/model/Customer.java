@@ -23,6 +23,26 @@ public class Customer {
         this.mail = mail;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
     public Customer() {
     }
 

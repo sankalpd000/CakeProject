@@ -52,6 +52,10 @@
     <res-ref-name>refr5</res-ref-name>
     <jndi-name>java:app/MYDS2</jndi-name>
   </resource-ref>
+  <resource-ref>
+    <res-ref-name>refr7</res-ref-name>
+    <jndi-name>java:app/MYDS2</jndi-name>
+  </resource-ref>
   <class-loader delegate="true"/>
   <jsp-config>
     <property name="keepgenerated" value="true">

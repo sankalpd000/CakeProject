@@ -32,9 +32,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <div><a href="index.jsp" class="active" id="home">
                     <img src="images\logo.png" alt="homepage" width="80px" height="30px"></a>
             </div>
-            <div id="searchdiv" >
-              <input type="text" placeholder="Search.." id="search"> 
-            </div>
+            
             <div id="groupAC">
                 <div class="dropdown">
                     <button class="dropbtn">Account</button> 

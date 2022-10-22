@@ -4,11 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/adminDash.jsp</file>
-            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/js/prod.js</file>
-            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/addprod.jsp</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/confirmation.jsp</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/custReg.jsp</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/styles/styleall.css</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/History.jsp</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/deliveryDash.jsp</file>
             <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/DLogin.jsp</file>
-            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/custLogin.jsp</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/updateStatus.jsp</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/Contact.html</file>
             <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/index.jsp</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/src/java/com/cakeClient/helper/OrderListDelivery.java</file>
+            <file>file:/C:/Users/s/Documents/NetBeansProjects/CakeProject/ProjectClient/web/receipt.jsp</file>
         </group>
     </open-files>
 </project-private>

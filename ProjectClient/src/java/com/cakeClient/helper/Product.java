@@ -36,6 +36,7 @@ public class Product {
            while(rs.next()){
                ProductDetails productDetail = new ProductDetails();
                
+               productDetail.setId(rs.getString("P_ID"));
                productDetail.setName(rs.getString("P_NAME"));
                productDetail.setDesc(rs.getString("P_DESC"));
                productDetail.setPrice(rs.getInt("P_PRICE"));

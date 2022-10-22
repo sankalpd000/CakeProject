@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="styles/topnav.css">
+        <link rel="stylesheet" href="styles/styleall.css">
+      <link rel="stylesheet" href="styles/formStyle.css">
+        <link rel="stylesheet" href="styles/custLogin.css"/>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Poppins:wght@500;600;700&family=Roboto&display=swap">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="topnav" align="center">
+            <div><a href="index.jsp" class="active" id="home"><img src="images\logo.png" alt="homepage" width="80px" height="30px"></a></div>
+            
+            <div id="groupAC">
+                <div class="dropdown">
+                    <button class="dropbtn">Account</button> 
+                      <div class="dropdown-content">
+                        <a href="custLogin.jsp">Customer</a>
+                        <a href="DLogin.jsp">Delivery Guy</a>
+                        <a href="adminLogin.jsp">Admin</a>
+                      </div>
+                </div>  
+                <div><a href="Contact.html" id="contact">Contact</a></div>
+            </div>
+      </div>
+    <body>
+        
+        
+        
+        <div class="custBanner">
+         <h1>add product</h1>
+        </div>
+        <div class="productForm">            
+             <form class="form" action="addprod2.jsp" method="post">
+                 <label for="P_NAME">Product name:</label><br>
+                 <input type="text" value="" id="P_NAME" name="P_NAME" required><br><br>
+                <br>
+                <label for="P_DES">Description:</label><br>
+                <input type="text" value="" id="P_DES" name="P_DES" required><br><br>
+                <br>
+                <label for="P_PRICE">Price:</label><br>
+                <input type="text" value="" id="P_PRICE" name="P_PRICE" required><br><br>
+                <br>
+                <label for="P_STOCK">Stock:</label><br>
+                <input type="text" value="" id="P_STOCK" name="P_STOCK" required><br><br>
+                <br>
+             <label for="P_ICON">Image:</label><br>
+                <input type='hidden' id='img_name'/>
+                <input type="file" id="P_ICON" onchange="getPath()" name="P_ICON">
+                  
+                <br>
+                <br>
+                <input type="image" value="Add product">
+            </form>
+            </div>
+        <div>
+            <form action="upload.jsp" method="post" class="form1" enctype="multipart/form-data">  
+                Select File:<input type="file" name="fname"/><br/>  
+                <input type="text"/>
+                <input type="image" src="MainUpload.png"/>  
+                 <input type="submit" value="add"/>
+            </form>  
+                
+        </div>
+                 <script src="js/new.js"></script>
+    </body>
+</html>

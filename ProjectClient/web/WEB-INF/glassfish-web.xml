@@ -22,4 +22,18 @@
       <description>Keep a copy of the generated servlet class' java code.</description>
     </property>
   </jsp-config>
+  <context-param> 
+   <description>Location to store uploaded file</description> 
+   <param-name>file-upload</param-name> 
+   <param-value>
+      C:\Users\s\Documents\NetBeansProjects\CakeProject\ProjectClient\build\web\images\product
+   </param-value> 
+</context-param>
+<multipart-config>
+               <location>C:\Users\s\Documents\NetBeansProjects\CakeProject\ProjectClient\build\web\images\product</location>
+               <max-file-size>20848820</max-file-size>
+               <max-request-size>418018841</max-request-size>
+               <file-size-threshold>1048576</file-size-threshold>
+           </multipart-config>
+
 </glassfish-web-app>

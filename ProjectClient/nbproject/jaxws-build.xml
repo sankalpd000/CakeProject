@@ -74,5 +74,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/com/viva"/>
         <delete dir="${build.generated.dir}/jax-wsCache/product"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-LoginAd, wsimport-client-SignUp, wsimport-client-product"/>
+    <target name="wsimport-client-Order" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Order"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Order" destdir="${build.generated.dir}/jax-wsCache/Order" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Order/wsdl/localhost_8080/ProjectServer/Order.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ProjectServer/Order?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Order/wsdl/localhost_8080/ProjectServer/Order.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Order"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Order">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Order" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/viva"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Order"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-LoginAd, wsimport-client-SignUp, wsimport-client-product, wsimport-client-Order"/>
 </project>
